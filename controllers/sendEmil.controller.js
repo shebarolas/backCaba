@@ -93,15 +93,15 @@ const sendEmail = async (req, res) => {
 
         const mailOptions = {
             from: 'cafeteriacabanaseluney@gmail.com',
-            to: `${email}`,
-            subject: `Arriendo Cabaña ${cabañas}`,
-            html: html
+            to: `cafeteriacabanaseluney@gmail.com`,
+            subject: `Arriendo de Cabaña ${cabañas} dueño`,
+            html: html2
           };
           const mailOptions1 = {
             from: 'cafeteriacabanaseluney@gmail.com',
             to: `${email}`,
             subject: `Arriendo Cabaña ${cabañas}`,
-            html: html2
+            html: html
           };
           
           try {
