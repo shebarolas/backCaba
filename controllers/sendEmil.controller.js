@@ -18,7 +18,7 @@ const sendEmail = async (req, res) => {
    console.log(req.body);
   
 
-   if(email == '' || nombre == '' || apellidos == '' || rut == '' || telefono == '' || cabañas == '' || dias == '' || personas == '' || fecha == '' || checkIn == '' || valor == ''){
+   if(email == '' || nombre == '' || apellidos == '' || rut == '' || telefono == '' || cabañas == '' || dias == '' || personas == '' || fecha == '' || checkIn == '' || valor == '' || personas <= 0){
       return res.status(500).json({
         message: 'Existen campos vacios, verifique que todos los campos esten completados'
       });
@@ -93,7 +93,7 @@ const sendEmail = async (req, res) => {
 
         const mailOptions = {
             from: 'cafeteriacabanaseluney@gmail.com',
-            to: `cafeteriacabanaseluney@gmail.com`,
+            to: `${email}`,
             subject: `Arriendo de Cabaña ${cabañas} dueño`,
             html: html2
           };
