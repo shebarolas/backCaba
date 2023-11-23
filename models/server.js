@@ -24,7 +24,7 @@ class Server {
         this.app.use(passport.initialize());
         this.app.use(passport.session());
         this.app.use(cors({
-            origin: 'http://localhost:5173',
+            origin: 'https://eluney.vercel.app',
             methods: 'GET,POST,PUT,DELETE',
             credentials: true
         }));
